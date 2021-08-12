@@ -1,0 +1,48 @@
+{
+    "categories": [
+        {
+            "id": 13545415,
+            "name": "Information",
+            "seo": "information",
+            "subjects": [
+                "gskgnbmsdlkhgj",
+                "diafgidfgsdgds",
+                "asfmnkabfyfgaf",
+                "gskgnbmsjfdhgs",
+                "gsdfgbmsdlkhga"
+            ]
+        },
+        {
+            "id": 13545417,
+            "name": "Discussions",
+            "seo": "discussions",
+            "subjects": [
+                "gskgfhhdlkhgjw",
+                "diafasdgsdgdsa",
+                "asfuipupuipgjg",
+                "thsgzdwqrfgfht",
+                "gsdfgbasdwqqqg"
+            ]
+        },
+        {
+            "id": 13545415,
+            "name": "Vehicles",
+            "seo": "cehicles",
+            "subjects": [
+                "tsfrtgfsq52510",
+                "thsasfefesgfht",
+                "as2312324yfgaf",
+                "gs1212bmghgfhS",
+                "gsdfg82df043ga"
+            ]
+        }
+    ],
+    "subjects": [
+        {
+            "id": 25454,
+            "categoryId": 13545415,
+            "name": "Informations Technology...",
+            "seo": "information-technology"
+        }
+    ]
+}
