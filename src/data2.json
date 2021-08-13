@@ -6,10 +6,7 @@
             "seo": "information",
             "subjects": [
                 "gskgnbmsdlkhgj",
-                "diafgidfgsdgds",
-                "asfmnkabfyfgaf",
-                "gskgnbmsjfdhgs",
-                "gsdfgbmsdlkhga"
+                "diafgidfgsdgds"
             ]
         },
         {
@@ -17,32 +14,75 @@
             "name": "Discussions",
             "seo": "discussions",
             "subjects": [
-                "gskgfhhdlkhgjw",
-                "diafasdgsdgdsa",
-                "asfuipupuipgjg",
-                "thsgzdwqrfgfht",
-                "gsdfgbasdwqqqg"
+                "gskgfhhdlkhgjw"
             ]
         },
         {
             "id": 13545415,
             "name": "Vehicles",
-            "seo": "cehicles",
+            "seo": "vehicles",
             "subjects": [
-                "tsfrtgfsq52510",
-                "thsasfefesgfht",
-                "as2312324yfgaf",
-                "gs1212bmghgfhS",
-                "gsdfg82df043ga"
+                "tsfrtgfsq52510"
             ]
         }
     ],
     "subjects": [
         {
-            "id": 25454,
+            "id": "gskgnbmsdlkhgj",
             "categoryId": 13545415,
             "name": "Informations Technology...",
+            "description": "Some texts..",
             "seo": "information-technology"
+        },
+        {
+            "id": "gskgfhhdlkhgjw",
+            "categoryId": 13545415,
+            "name": "Computer Science",
+            "description": "Some texts..",
+            "seo": "computer-science"
+        },
+        {
+            "id": "tsfrtgfsq52510",
+            "categoryId": 13545415,
+            "name": "New cars 2021",
+            "description": "Some texts..",
+            "seo": "new-cars"
         }
-    ]
+    ],
+    "publications": [
+        {
+            "id": 154,
+            "userId": 1,
+            "publicationsInfoId": 154,
+            "content": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
+        }
+    ],
+    "publicationsInfo": [
+        {
+            "id": 154,
+            "userId": 1,
+            "subjectSeo": "information-technology",
+            "seo": "recomended-course",
+            "title": "Recomended course."
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Khaled Mohsen",
+            "email": "pres.kbayomy@gmail.com",
+            "admin": 1
+        },
+        {
+            "id": 2,
+            "name": "Abdullah",
+            "email": "bfuture.asa@gmail.com",
+            "admin": 1
+        }
+    ],
+    "stats": {
+        "categories": 3,
+        "users": 1,
+        "online": 1
+    }
 }
