@@ -1,5 +1,5 @@
 <template>
-  <!-- <HelloWorld msg="حفظ الله بلادنا ولغتنا العربية"/> -->
+  <!-- <Start msg="حفظ الله بلادنا ولغتنا العربية"/> -->
   <router-view />
 </template>
 

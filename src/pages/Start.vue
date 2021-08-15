@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
     <div>
       <p>بسم الله والصلاة والسلام على رسول الله سيدنا محمَّد وعلى آله وصحبه ومن والاه</p>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Start',
   props: {
     msg: String
   }

@@ -1,14 +1,21 @@
 <template>
-  <div>
-    <h1>{{ publication.title }}</h1>
-    <p>{{ publication.content }}</p>
+  <div class="container">
+    <div>
+      <h1>{{ publication.title }}</h1>
+      <p>{{ publication.content }}</p>
+    </div>
+    <div>
+      <PublicationComments :rawComments="comments" />
+    </div>
   </div>
 </template>
 
 <script>
 import data from '@/data2.json'
+import PublicationComments from '@/components/PublicationComments'
 
 export default {
+  components: { PublicationComments },
   props: {
     category: { type: String, required: true },
     subject: { type: String, required: true },
@@ -25,6 +32,9 @@ export default {
       )
 
       return Object.assign(publication, data.publicationsInfo.find((item) => item.id === publication.id))
+    },
+    comments: function () {
+      return data.comments.filter((comment) => comment.publicationsInfoId === parseInt(this.publicationId))
     }
   }
 }
