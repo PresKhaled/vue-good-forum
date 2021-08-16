@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <AppThemeSwitcher />
     <div>
       <h1>{{ publication.title }}</h1>
       <p>{{ publication.content }}</p>

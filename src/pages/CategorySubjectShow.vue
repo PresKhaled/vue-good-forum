@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <AppThemeSwitcher />
     <div v-for="publication in publications" :key="publication.id" class="card bg-white mb-3" style="max-width: 18rem;">
       <div class="card-header">{{ getUserBy(publication.userId).name }}</div>
       <div class="card-body">

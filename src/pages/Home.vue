@@ -1,8 +1,7 @@
 <template>
-  <div class="container align-left">
-    <div class="light-mode">
-      <button class="btn" @click="dark = !dark"><i class="bi" :class="{ 'bi-lightbulb-off': dark, 'bi-lightbulb': !dark }"></i></button>
-    </div>
+  <div class="container align-left" :class="{ 'text-white bg-dark': dark }" >
+    <h1>Home page</h1>
+    <AppThemeSwitcher @switchThemeEvent="themeMode" />
     <div class="stats w-25">
       <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center" :class="{'text-white bg-dark': dark}">
@@ -46,7 +45,11 @@ export default {
       categories: data.categories,
       stats: data.stats,
       dark: { type: Boolean, default: false }
-      // darkModeButtonIcon: { 'bi-lightbulb': this.dark, 'bi-lightbulb-off': !this.dark }
+    }
+  },
+  methods: {
+    themeMode (switchThemeEventData) {
+      this.dark = switchThemeEventData
     }
   }
 }
