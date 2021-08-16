@@ -3,7 +3,6 @@ import Start from '@/pages/Start'
 import Home from '@/pages/Home'
 import Categories from '@/pages/Categories'
 import Category from '@/pages/Category'
-import CategorySubjects from '@/pages/CategorySubjects'
 import CategorySubjectShow from '@/pages/CategorySubjectShow'
 import PublicationShow from '@/pages/PublicationShow'
 import NotFound from '@/pages/NotFound'
@@ -29,12 +28,6 @@ const routes = [
     path: '/categories/:category',
     name: 'Category',
     component: Category,
-    props: true
-  },
-  {
-    path: '/categories/:category/subjects',
-    name: 'CategorySubjects',
-    component: CategorySubjects,
     props: true
   },
   {

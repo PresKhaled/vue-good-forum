@@ -1,11 +1,17 @@
 <template>
-  <div class="container">
-    <AppThemeSwitcher />
-    <div v-for="publication in publications" :key="publication.id" class="card bg-white mb-3" style="max-width: 18rem;">
-      <div class="card-header">{{ getUserBy(publication.userId).name }}</div>
-      <div class="card-body">
-        <h5 class="card-title"><router-link :to="{name: 'PublicationShow', params: {category: category, subject: subject, publicationId: publication.id}}">{{ publication.title }}</router-link></h5>
-        <p class="card-text">{{ publication.description }}</p>
+  <div class="ui grid center aligned">
+    <div class="five wide column">
+      <h1 class="ui header left aligned">{{ subjectDetails.name }} publications</h1>
+      <div class="ui cards publications">
+        <div v-for="publication in publications" :key="publication.id" class="card">
+          <div class="content">
+            <div class="header"><router-link :to="{name: 'PublicationShow', params: {category: category, subject: subject, publicationId: publication.id}}">{{ publication.title }}</router-link></div>
+            <div class="meta">{{ getUserBy(publication.userId).name }}</div>
+            <div class="description">
+              {{ publication.description }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -29,11 +35,16 @@ export default {
   computed: {
     publications: function () {
       return data.publicationsInfo.filter((item) => item.subjectSeo === this.subject)
+    },
+    subjectDetails: function () {
+      return data.subjects.find((subject) => subject.seo === this.subject)
     }
   }
 }
 </script>
 
 <style scoped>
-
+  .publications, a {
+    font-family: 'Amiri', serif !important;
+  }
 </style>

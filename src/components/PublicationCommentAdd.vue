@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <form @submit.prevent="newComment">
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Add comment</label>
-        <textarea v-model="content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <div class="left aligned">
+    <form id="form-new-comment" @submit.prevent="newComment">
+      <div class="ui form">
+        <div class="field">
+          <label>Add comment</label>
+          <textarea v-model="content" rows="2"></textarea>
+        </div>
       </div>
-      <button class="btn btn-light">Add</button>
+      <br />
+      <button class="ui button green">Add</button>
     </form>
   </div>
 </template>
@@ -25,6 +28,9 @@ export default {
         userId: 2,
         content: this.content
       })
+
+      // this.content = ''
+      document.getElementById('form-new-comment').reset()
     }
   }
 }

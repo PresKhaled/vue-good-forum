@@ -30,7 +30,7 @@
         {
             "id": "gskgnbmsdlkhgj",
             "categoryId": 13545415,
-            "name": "Informations Technology...",
+            "name": "Informations Technology",
             "description": "Some texts..",
             "seo": "information-technology"
         },
@@ -40,13 +40,6 @@
             "name": "Computer Science",
             "description": "Some texts..",
             "seo": "computer-science"
-        },
-        {
-            "id": "tsfrtgfsq52510",
-            "categoryId": 13545415,
-            "name": "New cars 2021",
-            "description": "Some texts..",
-            "seo": "new-cars"
         }
     ],
     "publications": [

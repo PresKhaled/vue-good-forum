@@ -1,16 +1,12 @@
 <template>
   <div>
-    <div v-for="comment in comments" :key="comment.id" class="card">
-      <div class="card-header">
-        {{ getUserBy(comment.userId).name }}
-      </div>
-      <div class="card-body">
-        <p class="card-text">{{ comment.content }}</p>
-      </div>
+    <h2 class="ui header right aligned">التعليقات</h2>
+    <div v-for="comment in comments" :key="comment.id" class="ui segment">
+      <h4 class="ui header teal">{{ getUserBy(comment.userId).name }}</h4>
+      <p>{{ comment.content }}</p>
     </div>
-    <div>
-      <PublicationCommentAdd @newComment="insertComment" />
-    </div>
+
+    <PublicationCommentAdd @newComment="insertComment" />
   </div>
 </template>
 
@@ -33,7 +29,7 @@ export default {
     }
   },
   methods: {
-    // Insert a new comment in comments in the memory.
+    // Insert a new comment in 'this.comments' in the memory.
     insertComment (customEventData) {
       const newComment = {
         ...customEventData,
@@ -41,8 +37,6 @@ export default {
       }
 
       this.comments.push(newComment)
-
-      console.log(this.comments)
     }
   }
 }

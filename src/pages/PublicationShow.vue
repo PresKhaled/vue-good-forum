@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
-    <AppThemeSwitcher />
-    <div>
-      <h1>{{ publication.title }}</h1>
-      <p>{{ publication.content }}</p>
-    </div>
-    <div>
+  <div class="ui grid center aligned">
+    <div class="five wide column publications">
+      <h1 class="ui header right aligned">{{ publication.title }}</h1>
+      <div class="ui tall stacked segment">
+        <p>{{ publication.content }}</p>
+      </div>
+
       <PublicationComments :rawComments="comments" />
     </div>
   </div>
@@ -41,6 +41,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
+  .publications, h1, h2 {
+    font-family: 'Amiri', serif !important;
+  }
 </style>
