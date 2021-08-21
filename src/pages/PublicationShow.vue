@@ -40,8 +40,8 @@ export default {
 }
 </script>
 
-<style>
-  .publications, h1, h2 {
+<style scoped>
+  .publications, h1 {
     font-family: 'Amiri', serif !important;
   }
 </style>

@@ -45,5 +45,7 @@ export default {
 </script>
 
 <style scoped>
-
+h2 {
+  font-family: 'Amiri', serif !important;
+}
 </style>

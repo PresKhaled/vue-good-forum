@@ -1,7 +1,7 @@
 <template>
   <div class="ui grid center aligned">
     <div class="five wide column">
-      <h1 class="ui header left aligned">Home page</h1>
+      <h1 class="ui header left aligned">The good forum</h1>
 
       <div class="row">
         <h2 class="ui header left aligned">Stats</h2>
