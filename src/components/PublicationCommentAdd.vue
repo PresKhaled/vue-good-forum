@@ -18,18 +18,17 @@ export default {
   name: 'PublicationCommentAdd',
   data () {
     return {
-      content: ''
+      content: '' // textarea value.
     }
   },
   methods: {
     newComment () {
       this.$emit('newComment', {
-        id: Math.random(),
         userId: 2,
         content: this.content
       })
 
-      // this.content = ''
+      this.content = ''
       document.getElementById('form-new-comment').reset()
     }
   }

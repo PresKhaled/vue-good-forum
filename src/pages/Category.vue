@@ -19,8 +19,6 @@
 </template>
 
 <script>
-import data from '@/data2.json'
-
 export default {
   props: {
     category: { type: String, required: true }
@@ -29,11 +27,13 @@ export default {
     return {}
   },
   computed: {
-    categoryDetails: function () {
-      return data.categories.find((category) => category.seo === this.category)
+    categoryDetails () {
+      return this.$store.state.categories
+        .find((category) => category.seo === this.category)
     },
-    subjects: function () {
-      return data.subjects.filter((subject) => subject.categoryId === this.categoryDetails.id)
+    subjects () {
+      return this.$store.state.subjects
+        .filter((subject) => subject.categoryId === this.categoryDetails.id)
     }
   }
 }

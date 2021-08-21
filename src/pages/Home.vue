@@ -34,13 +34,16 @@
 </template>
 
 <script>
-import data from '@/data2.json'
-
 export default {
   data () {
-    return {
-      categories: data.categories,
-      stats: data.stats
+    return {}
+  },
+  computed: {
+    categories () {
+      return this.$store.state.categories
+    },
+    stats () {
+      return this.$store.state.stats
     }
   }
 }

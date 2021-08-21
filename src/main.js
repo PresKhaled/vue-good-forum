@@ -1,10 +1,12 @@
 import { createApp } from 'vue'
 import App from '@/App'
 import router from '@/router'
+import store from '@/store'
 
 const vueApp = createApp(App)
 
 vueApp.use(router)
+vueApp.use(store)
 
 const requireComponent = require.context('@/components', true, /App[A-Z]\w+\.(vue|js)$/)
 

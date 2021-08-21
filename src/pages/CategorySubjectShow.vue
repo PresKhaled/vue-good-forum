@@ -18,26 +18,28 @@
 </template>
 
 <script>
-import data from '@/data2.json'
-
 export default {
   props: {
     category: { type: String, required: true },
     subject: { type: String, required: true }
   },
   data () {
-    return {
-      getUserBy (id) {
-        return data.users.find((user) => user.id === id)
-      }
-    }
+    return {}
   },
   computed: {
-    publications: function () {
-      return data.publicationsInfo.filter((item) => item.subjectSeo === this.subject)
+    publications () {
+      return this.$store.state.publicationsInfo
+        .filter((item) => item.subjectSeo === this.subject)
     },
-    subjectDetails: function () {
-      return data.subjects.find((subject) => subject.seo === this.subject)
+    subjectDetails () {
+      return this.$store.state.subjects
+        .find((subject) => subject.seo === this.subject)
+    }
+  },
+  methods: {
+    getUserBy (id) {
+      return this.$store.state.users
+        .find((user) => user.id === id)
     }
   }
 }

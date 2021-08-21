@@ -6,13 +6,12 @@
         <p>{{ publication.content }}</p>
       </div>
 
-      <PublicationComments :rawComments="comments" />
+      <PublicationComments />
     </div>
   </div>
 </template>
 
 <script>
-import data from '@/data2.json'
 import PublicationComments from '@/components/PublicationComments'
 
 export default {
@@ -26,16 +25,16 @@ export default {
     return {}
   },
   computed: {
-    // validateUrl: function () {}
-    publication: function () {
-      const publication = data.publications.find(
+    publication () {
+      const publication = this.$store.state.publications.find(
         (item) => item.id === parseInt(this.publicationId)
       )
 
-      return Object.assign(publication, data.publicationsInfo.find((item) => item.id === publication.id))
-    },
-    comments: function () {
-      return data.comments.filter((comment) => comment.publicationsInfoId === parseInt(this.publicationId))
+      return Object.assign(
+        publication,
+        this.$store.state.publicationsInfo
+          .find((item) => item.id === publication.id)
+      )
     }
   }
 }

@@ -11,21 +11,18 @@
 </template>
 
 <script>
-import data from '@/data2.json'
 import PublicationCommentAdd from '@/components/PublicationCommentAdd'
 
 export default {
   name: 'PublicationComments',
   components: { PublicationCommentAdd },
-  props: {
-    rawComments: { type: Object, required: true }
-  },
   data () {
-    return {
-      comments: this.rawComments,
-      getUserBy (id) {
-        return data.users.find((user) => user.id === id)
-      }
+    return {}
+  },
+  computed: {
+    comments () {
+      return this.$store.state.comments
+        .filter(comment => comment.publicationsInfoId === parseInt(this.$route.params.publicationId))
     }
   },
   methods: {
@@ -36,7 +33,12 @@ export default {
         publicationsInfoId: parseInt(this.$route.params.publicationId)
       }
 
-      this.comments.push(newComment)
+      this.$store.dispatch('addComment', newComment)
+    },
+
+    getUserBy (id) {
+      return this.$store.state.users
+        .find((user) => user.id === id)
     }
   }
 }
