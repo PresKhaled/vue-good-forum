@@ -2,7 +2,15 @@ import { createStore } from 'vuex'
 import data from '@/data2.json'
 
 export default createStore({
-  state: data,
+  state: {
+    ...data,
+    authenticatedUserId: 2
+  },
+  getters: {
+    authenticatedUser (state) {
+      return state.users.find(user => user.id === state.authenticatedUserId)
+    }
+  },
   actions: {
     addComment ({ commit }, comment) {
       comment.id = Math.random()

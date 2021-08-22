@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Start from '@/pages/Start'
 import Home from '@/pages/Home'
+import Profile from '@/pages/Profile'
 import Categories from '@/pages/Categories'
 import Category from '@/pages/Category'
 import CategorySubjectShow from '@/pages/CategorySubjectShow'
@@ -18,6 +19,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
   },
   {
     path: '/categories',
