@@ -26,6 +26,12 @@ const routes = [
     component: Profile
   },
   {
+    path: '/profile/editInfo',
+    name: 'ProfileEditInfo',
+    component: Profile,
+    props: { editInfo: true }
+  },
+  {
     path: '/categories',
     name: 'Categories',
     component: Categories

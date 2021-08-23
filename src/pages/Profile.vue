@@ -1,6 +1,12 @@
 <template>
   <div class="ui grid center aligned">
-    <UserInfo :user="authenticatedUser" />
+    <div class="ui aligned left">
+      <UserInfo :user="authenticatedUser" />
+      <router-link v-if="!editInfo" :to="{ name: 'ProfileEditInfo' }">
+        <button class="ui button green">Edit info</button>
+      </router-link>
+      <UserEditInfo v-else :user="authenticatedUser" />
+    </div>
     <UserPublications :publications="publications" />
   </div>
 </template>
@@ -8,12 +14,17 @@
 <script>
 import { mapGetters } from 'vuex'
 import UserInfo from '@/components/UserInfo'
+import UserEditInfo from '@/components/UserEditInfo'
 import UserPublications from '@/components/UserPublications'
 
 export default {
   components: {
     UserInfo,
+    UserEditInfo,
     UserPublications
+  },
+  props: {
+    editInfo: { type: Boolean, default: false }
   },
   data () {
     return {}
