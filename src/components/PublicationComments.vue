@@ -21,8 +21,10 @@ export default {
   },
   computed: {
     comments () {
-      return this.$store.state.comments
-        .filter(comment => comment.publicationsInfoId === parseInt(this.$route.params.publicationId))
+      return this.$store.state.comments.filter(
+        comment =>
+          comment.publicationsInfoId === this.$route.params.publicationId
+      )
     }
   },
   methods: {
@@ -30,15 +32,14 @@ export default {
     insertComment (customEventData) {
       const newComment = {
         ...customEventData,
-        publicationsInfoId: parseInt(this.$route.params.publicationId)
+        publicationsInfoId: this.$route.params.publicationId
       }
 
       this.$store.dispatch('addComment', newComment)
     },
 
     getUserBy (id) {
-      return this.$store.state.users
-        .find((user) => user.id === id)
+      return this.$store.state.users.find(user => user.id === id)
     }
   }
 }

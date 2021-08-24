@@ -27,13 +27,14 @@ export default {
   computed: {
     publication () {
       const publication = this.$store.state.publications.find(
-        (item) => item.id === parseInt(this.publicationId)
+        item => item.id === this.publicationId
       )
 
       return Object.assign(
         publication,
-        this.$store.state.publicationsInfo
-          .find((item) => item.id === publication.id)
+        this.$store.state.publicationsInfo.find(
+          item => item.id === publication.id
+        )
       )
     }
   }
@@ -41,7 +42,8 @@ export default {
 </script>
 
 <style scoped>
-  .publications, h1 {
-    font-family: 'Amiri', serif !important;
-  }
+.publications,
+h1 {
+  font-family: 'Amiri', serif !important;
+}
 </style>

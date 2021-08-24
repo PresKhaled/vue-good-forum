@@ -5,6 +5,7 @@ import Profile from '@/pages/Profile'
 import Categories from '@/pages/Categories'
 import Category from '@/pages/Category'
 import CategorySubjectShow from '@/pages/CategorySubjectShow'
+import PublicationNew from '@/pages/PublicationNew'
 import PublicationShow from '@/pages/PublicationShow'
 import NotFound from '@/pages/NotFound'
 import data from '@/data2.json'
@@ -49,13 +50,41 @@ const routes = [
     props: true
   },
   {
+    path: '/categories/:category/:subject/new',
+    name: 'PublicationNew',
+    component: PublicationNew,
+    props: true,
+    // to, from, next
+    beforeEnter (to, _, next) {
+      const subjectData = data.subjects.find(
+        subject => subject.seo === to.params.subject
+      )
+      const categoryExists = data.categories.find(
+        category => category.id === subjectData.categoryId
+      )
+
+      // Category exists.
+      if (categoryExists) return next()
+
+      // Category doesn't exist, redirect to NotFound page without changing the url in the browser to allow to the user to edit the typo in the url.
+      return next({
+        name: 'NotFound',
+        params: { pathMatch: to.path.substring(1).split('/') },
+        query: to.query,
+        hash: to.hash
+      })
+    }
+  },
+  {
     path: '/categories/:category/:subject/:publicationId',
     name: 'PublicationShow',
     component: PublicationShow,
     props: true,
     // to, from, next
     beforeEnter (to, _, next) {
-      const publicationExists = data.publications.find((publication) => publication.id === parseInt(to.params.publicationId))
+      const publicationExists = data.publications.find(
+        publication => publication.id === to.params.publicationId
+      )
 
       // Publication exists.
       if (publicationExists) return next()

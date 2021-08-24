@@ -1,118 +1,111 @@
 {
-    "categories": [
-        {
-            "id": 13545415,
-            "name": "Information",
-            "seo": "information",
-            "subjects": [
-                "gskgnbmsdlkhgj",
-                "diafgidfgsdgds"
-            ]
-        },
-        {
-            "id": 13545417,
-            "name": "Discussions",
-            "seo": "discussions",
-            "subjects": [
-                "gskgfhhdlkhgjw"
-            ]
-        },
-        {
-            "id": 135415415,
-            "name": "Vehicles",
-            "seo": "vehicles",
-            "subjects": [
-                "tsfrtgfsq52510"
-            ]
-        }
-    ],
-    "subjects": [
-        {
-            "id": "gskgnbmsdlkhgj",
-            "categoryId": 13545415,
-            "name": "Informations Technology",
-            "description": "Some texts..",
-            "seo": "information-technology"
-        },
-        {
-            "id": "gskgfhhdlkhgjw",
-            "categoryId": 13545415,
-            "name": "Computer Science",
-            "description": "Some texts..",
-            "seo": "computer-science"
-        }
-    ],
-    "publications": [
-        {
-            "id": 154,
-            "userId": 2,
-            "publicationsInfoId": 154,
-            "content": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
-        },
-        {
-            "id": 155,
-            "userId": 2,
-            "publicationsInfoId": 155,
-            "content": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
-        }
-    ],
-    "publicationsInfo": [
-        {
-            "id": 154,
-            "userId": 1,
-            "subjectSeo": "information-technology",
-            "seo": "recomended-course-vue",
-            "title": "ترشيح دورة تدريبية في Vuejs3",
-            "description": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
-        },
-        {
-            "id": 155,
-            "userId": 1,
-            "subjectSeo": "information-technology",
-            "seo": "recomended-course-laravel",
-            "title": "ترشيح دورة تدريبية في Laravel",
-            "description": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "publicationsInfoId": 154,
-            "userId": 1,
-            "content": "تعليق يحتوي على كلام طيب."
-        },
-        {
-            "id": 2,
-            "publicationsInfoId": 155,
-            "userId": 2,
-            "content": "تعليق ما.."
-        },
-        {
-            "id": 3,
-            "publicationsInfoId": 155,
-            "userId": 1,
-            "content": "تعليق ما.. 2"
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "name": "Khaled Mohsen",
-            "email": "pres.kbayomy@gmail.com",
-            "admin": 1
-        },
-        {
-            "id": 2,
-            "name": "Abdullah",
-            "email": "bfuture.asa@gmail.com",
-            "admin": 1,
-            "word": "Good words here.",
-            "githubUsername": "PresKhaled"
-        }
-    ],
-    "stats": {
-        "categories": 3,
-        "users": 1,
-        "online": 1
+  "categories": [
+    {
+      "id": "13545415",
+      "name": "Information",
+      "seo": "information",
+      "subjects": ["gskgnbmsdlkhgj", "diafgidfgsdgds"]
+    },
+    {
+      "id": "13545417",
+      "name": "Discussions",
+      "seo": "discussions",
+      "subjects": ["gskgfhhdlkhgjw"]
+    },
+    {
+      "id": "135415415",
+      "name": "Vehicles",
+      "seo": "vehicles",
+      "subjects": ["tsfrtgfsq52510"]
     }
+  ],
+  "subjects": [
+    {
+      "id": "gskgnbmsdlkhgj",
+      "categoryId": "13545415",
+      "name": "Informations Technology",
+      "description": "Some texts..",
+      "seo": "information-technology"
+    },
+    {
+      "id": "gskgfhhdlkhgjw",
+      "categoryId": "13545415",
+      "name": "Computer Science",
+      "description": "Some texts..",
+      "seo": "computer-science"
+    }
+  ],
+  "publications": [
+    {
+      "id": "154",
+      "userId": 2,
+      "publicationsInfoId": "154",
+      "content": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
+    },
+    {
+      "id": "155",
+      "userId": 2,
+      "publicationsInfoId": "155",
+      "content": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
+    }
+  ],
+  "publicationsInfo": [
+    {
+      "id": "154",
+      "userId": 1,
+      "subjectSeo": "information-technology",
+      "seo": "recomended-course-vue",
+      "title": "ترشيح دورة تدريبية في Vuejs3",
+      "description": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
+    },
+    {
+      "id": "155",
+      "userId": 1,
+      "subjectSeo": "information-technology",
+      "seo": "recomended-course-laravel",
+      "title": "ترشيح دورة تدريبية في Laravel",
+      "description": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "publicationsInfoId": "154",
+      "userId": 1,
+      "content": "تعليق يحتوي على كلام طيب."
+    },
+    {
+      "id": 2,
+      "publicationsInfoId": "155",
+      "userId": 2,
+      "content": "تعليق ما.."
+    },
+    {
+      "id": 3,
+      "publicationsInfoId": "155",
+      "userId": 1,
+      "content": "تعليق ما.. 2"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Khaled Mohsen",
+      "email": "pres.kbayomy@gmail.com",
+      "admin": 1
+    },
+    {
+      "id": 2,
+      "name": "Abdullah",
+      "email": "bfuture.asa@gmail.com",
+      "admin": 1,
+      "word": "Good words here.",
+      "githubUsername": "PresKhaled"
+    }
+  ],
+  "stats": {
+    "categories": 3,
+    "users": 1,
+    "online": 1
+  }
 }
