@@ -23,20 +23,22 @@ export default {
   },
   methods: {
     newComment () {
-      this.$emit('newComment', {
-        userId: 2,
-        content: this.content
-      })
+      if (this.content.length > 0) {
+        this.$emit('newComment', {
+          userId: 2,
+          content: this.content
+        })
 
-      this.content = ''
-      document.getElementById('form-new-comment').reset()
+        this.content = ''
+        document.getElementById('form-new-comment').reset()
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 </style>

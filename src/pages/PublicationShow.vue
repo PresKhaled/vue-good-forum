@@ -1,7 +1,20 @@
 <template>
   <div class="ui grid center aligned">
     <div class="five wide column publications">
-      <h1 class="ui header right aligned">{{ publication.title }}</h1>
+      <h1 class="ui header right aligned">
+        {{ publication.title }}
+        <router-link
+          :to="{
+            name: 'PublicationEdit',
+            params: { category, subject, publicationId: publication.id }
+          }"
+          tag="button"
+          class="ui button teal"
+        >
+          <i class="edit outline icon"></i>
+          Edit this publication
+        </router-link>
+      </h1>
       <div class="ui tall stacked segment">
         <p>{{ publication.content }}</p>
       </div>

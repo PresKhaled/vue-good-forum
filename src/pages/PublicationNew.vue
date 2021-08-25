@@ -61,7 +61,7 @@ export default {
 
     cancel () {
       this.$router.push({
-        name: 'CategorySubjectShow',
+        name: 'SubjectShow',
         category: this.category,
         subject: this.subject
       })

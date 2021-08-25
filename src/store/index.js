@@ -45,6 +45,20 @@ export default createStore({
       })
 
       return state.publications.find(publication => publication.id === id)
+    },
+
+    async updatePublication ({ commit }, data) {
+      commit('updatePublicationInfo', {
+        publicationId: data.publicationId,
+        title: data.title
+      })
+      commit('updatePublication', {
+        publicationId: data.publicationId,
+        content: data.content
+      })
+      /* return state.publications.find(
+        publication => publication.id === data.publicationId
+      ) */
     }
   },
   mutations: {
@@ -65,6 +79,28 @@ export default createStore({
 
     saveNewPublicationInfo (state, newPublicationInfo) {
       state.publicationsInfo.push(newPublicationInfo)
+    },
+
+    updatePublication (state, { publicationId, content }) {
+      const publication = state.publications.find(
+        publication => publication.id === publicationId
+      )
+      const publicationIndex = state.publications.indexOf(publication)
+
+      publication.content = content
+
+      state.publications[publicationIndex] = publication
+    },
+
+    updatePublicationInfo (state, { publicationId, title }) {
+      const publicationInfo = state.publicationsInfo.find(
+        publicationInfo => publicationInfo.id === publicationId
+      )
+      const publicationInfoIndex = state.publications.indexOf(publicationInfo)
+
+      publicationInfo.title = title
+
+      state.publicationsInfo[publicationInfoIndex] = publicationInfo
     }
   }
 })
