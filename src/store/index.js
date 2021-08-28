@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import data from '@/data2.json'
+import { findBy } from '@/helpers'
 
 export default createStore({
   state: {
@@ -8,7 +9,7 @@ export default createStore({
   },
   getters: {
     authenticatedUser (state) {
-      return state.users.find(user => user.id === state.authenticatedUserId)
+      return findBy(state.users, state.authenticatedUserId)
     }
   },
   actions: {
@@ -44,7 +45,7 @@ export default createStore({
         description
       })
 
-      return state.publications.find(publication => publication.id === id)
+      return findBy(state.publications, id)
     },
 
     async updatePublication ({ commit }, data) {
@@ -56,7 +57,9 @@ export default createStore({
         publicationId: data.publicationId,
         content: data.content
       })
-      /* return state.publications.find(
+      /*
+        findBy
+        return state.publications.find(
         publication => publication.id === data.publicationId
       ) */
     }
@@ -82,9 +85,7 @@ export default createStore({
     },
 
     updatePublication (state, { publicationId, content }) {
-      const publication = state.publications.find(
-        publication => publication.id === publicationId
-      )
+      const publication = findBy(state.publications, publicationId)
       const publicationIndex = state.publications.indexOf(publication)
 
       publication.content = content
@@ -93,9 +94,7 @@ export default createStore({
     },
 
     updatePublicationInfo (state, { publicationId, title }) {
-      const publicationInfo = state.publicationsInfo.find(
-        publicationInfo => publicationInfo.id === publicationId
-      )
+      const publicationInfo = findBy(state.publicationsInfo, publicationId)
       const publicationInfoIndex = state.publications.indexOf(publicationInfo)
 
       publicationInfo.title = title
